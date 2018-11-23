@@ -62,7 +62,7 @@ final_dataset[,id:=NULL]
 summary_table <- final_dataset[, lapply(.SD, mean), by=list(activityLabel, subjectId)]
 
 # write the 2 data sets to their respective file
-fwrite(final_dataset, "final_dataset.txt")
-fwrite(summary_table, "summary_table.txt")
+fwrite(final_dataset, "final_dataset.txt", col.names = FALSE)
+fwrite(summary_table, "summary_table.txt", col.names = FALSE)
 
 
